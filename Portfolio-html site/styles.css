@@ -1,0 +1,175 @@
+/* traverse through the modules that were made in html file using flexbot */
+
+
+/* MASTER STYLES */
+
+/* take html file and change standsard 8px to 0 */
+body{
+    margin: 0px
+}
+
+.container {
+    /*tell container to use grid */
+    display: grid;
+    /* set grid column to one fractional unit */
+    grid-template-columns: 1fr;
+}
+
+
+/* END MASTER STYLES */
+
+
+/* BEGIN TOP BORDER */
+
+.nav-wrapper{
+    /* statement prevents diffent divs to be on different lines IF under one big function */
+    display: flex;
+    /* justify content by spacing out using all open space between */
+    justify-content: space-between;
+    /* increase padding/zoning */
+    padding: 38px;
+}
+
+.left-side{
+    /* statement prevents diffent divs to be on different lines IF under one big function */
+    display: flex;  
+}
+
+/*form of navigating through divs*/
+.nav-wrapper > .left-side > div {
+    /* space out Home and About */
+    margin-right: 20px;
+    /* change font */
+    font-size: 0.9em;
+    /* transfom words to uppercase */
+    text-transform: uppercase;
+}
+
+/* call directly to navlinkwrapper */
+.nav-link-wrapper{
+    /* set height */
+    height: 22px;
+    /* subtle effect */
+    border-bottom: 1px solid transparent;
+    /* add transition animation */
+    transition: border-bottom 0.5s;
+}
+
+/*inside navlinkwrapper with a link*/
+.nav-link-wrapper a{
+    /* change color */
+    color: #8a8a8a;
+    /* null original HTML text deco */
+    text-decoration: none;
+    /* add transition */
+    transition: color 0.5s;
+}
+
+/* change style when hovering over*/
+.nav-link-wrapper:hover{
+    /* darken border color when hovering over */
+    border-bottom: 1px solid black;
+
+}
+
+/* change style when hovering over*/
+.nav-link-wrapper a:hover{
+    /* change font color*/
+    color: black;
+}
+
+.active-nav-link{
+    border-bottom: 1px solid black;
+}
+
+.active-nav-link a{
+    color: black !important;
+}
+
+
+
+/* FINISH TOP BORDER */
+
+/* BEGIN MAIN BODY */
+
+
+.portfolio-items-wrapper{
+    display: grid;
+    /* give each one their own full sized column*/
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio-item-wrapper{
+    position: relative;
+
+}
+/* adjust background photos to speciific settings */
+.portfolio-img-background{
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* adjust within wrapped text  */
+.img-text-wrapper{
+    /* position text wrap at the very top  */
+    position: absolute;
+    top: 0;
+    /* use flexbot to align text in specific settings */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+/* style logos */
+.logo-wrapper img{
+    width: 50%;
+    margin-bottom: 20px;
+
+}
+.img-text-wrapper .subtitle{
+    transition: 1s;
+    font-weight: 600;
+    color:transparent;
+}
+
+.img-text-wrapper:hover .subtitle{
+    font-weight: 600;
+    color: lightseagreen;
+
+}
+/* darken main image */
+.img-darken{
+    transition: 1s;
+    filter: brightness(10%);
+}
+
+/*END MAIN BODY*/
+
+/* BEGIN ABOUT */
+
+.two-column-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* shorten image's width */
+.profile-image-wrapper img{
+    width: 100%;
+    
+
+}
+
+.profile-content-wrapper{
+    padding: 30px;
+}
+
+
+.profile-content-wrapper h1{
+    color: lightseagreen;
+
+}
